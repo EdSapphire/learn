@@ -74,15 +74,30 @@ char buffer[], int flag, char flag_ch, int wid, int precision, int size);
 int print_non_printable(va_list types, char buffer[],
 	int flag, int wid, int precision, int size);
 
-/* Funcion to print memory address */
+/* Function to print memory address */
 int print_pointer(va_list types, char buffer[],
 	int flag, int wid, int precision, int size);
 
+<<<<<<< HEAD
+/* Function to handle other specifiers */
+int get_flags(const char *format, int *i);
+=======
 /* Funciotns to handle other specifiers */
 int calc_flag(const char *format, int *i);
+<<<<<<< HEAD
 int print_width(const char *format, int *i, va_list view);
 int calc_precision(const char *format, int *i, va_list view);
 int get_size(const char *format, int *i);
+||||||| 1803edd
+int get_width(const char *format, int *i, va_list list);
+int get_precision(const char *format, int *i, va_list list);
+int get_size(const char *format, int *i);
+=======
+>>>>>>> 1803edddcc57daff38b389f7bf6ab8efd3c0bfb0
+int get_width(const char *format, int *i, va_list list);
+int get_precision(const char *format, int *i, va_list list);
+int get_size(const char *format, int *n);
+>>>>>>> 7578fa0a8eedd693b84a3441a23186cf018ddbe5
 
 /*Function to print string in reverse*/
 int print_reverse(va_list types, char buffer[],
@@ -110,4 +125,5 @@ int is_digit(char c);
 long int convert_size(long int m, int size);
 long int convert_size1(unsigned long int m, int size);
 
-#endif
+#endif 
+
