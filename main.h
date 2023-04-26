@@ -102,7 +102,7 @@ int buf_num(int d, char buffer[], int flag, int wid, int precision,
 	int length, char hnd, char extra_c);
 int un_num(int is_negative, int d, char buffer[], int flag, int wid, int precision, int size);
 int new_pointer(char buffer[], int d, int length,
-        int wid, int flag, char hnd, char extra_c, int buf_pad)
+        int wid, int flag, char hnd, char extra_c, int buf_pad);
 
 /** CONVERTS **/
 int is_print1(char c);
