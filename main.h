@@ -83,7 +83,7 @@ int var_ptr(va_list type, char buffer[],
 int _reverse(va_list type, char buffer[], int flag, int wid, int
 		precision, int size);
 
-/** Print a string in rot 13*/
+/** Print a string in rot 13*/O[O
 int rot13_str(va_list type, char buffer[],
 	int flag, int wid, int precision, int size);
 

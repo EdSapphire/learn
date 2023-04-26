@@ -1,17 +1,6 @@
 #include "main.h"
 
-/**
- * print_buffer - Prints the contents of the buffer if it exist
- * @buffer: Array of chars
- * @buff_ind: Index at which to add next char, represents the length.
- */
-void print_buffer(char buffer[], int *buff_d)
-{
-        if (*buff_d > 0)
-                write(1, &buffer[0], *buff_d);
-
-        *buff_d = 0;
-}
+void print_buffer(char buffer[], int *buff_d);
 
 /**
  * _printf - This is a Printf function
@@ -63,4 +52,17 @@ int _printf(const char *format, ...)
 	va_end(view);
 
 	return (printed_chars);
+}
+
+/**
+ * print_buffer - Prints the contents of the buffer if it exist
+ * @buffer: Array of chars
+ * @buff_ind: Index at which to add next char, represents the length.
+ */
+void print_buffer(char buffer[], int *buff_d)
+{
+        if (*buff_d > 0)
+                write(1, &buffer[0], *buff_d);
+
+        *buff_d = 0;
 }

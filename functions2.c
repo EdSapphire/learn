@@ -47,7 +47,7 @@ int var_ptr(va_list type, char buffer[],
 
 	d++;
 
-	return (write_ptr(buffer, d, length,
+	return (new_pointer(buffer, d, length,
 		wid, flag, hnd, extra_c, buf_pad));
 }
 

@@ -18,7 +18,7 @@ int int_num(va_list type, char buffer[],
 	int i = BUFF_SIZE - 2;
 	unsigned long int m = va_arg(type, unsigned long int);
 
-	m = convert_size_num(m, size);
+	m = convert_size1(m, size);
 
 	if (m == 0)
 		buffer[i--] = '0';
@@ -33,7 +33,7 @@ int int_num(va_list type, char buffer[],
 
 	i++;
 
-	return (write_num(0, i, buffer, flag, wid, precision, size));
+	return (un_num(0, i, buffer, flag, wid, precision, size));
 }
 
 /**
@@ -52,12 +52,12 @@ int int_octal(va_list type, char buffer[],
 {
 
 	int i = BUFF_SIZE - 2;
-	unsigned long int m = va_arg(types, unsigned long int);
+	unsigned long int m = va_arg(type, unsigned long int);
 	unsigned long int init_num = m;
 
 	UNUSED(wid);
 
-	m = convert_size_num(m, size);
+	m = convert_size1(m, size);
 
 	if (m == 0)
 		buffer[i--] = '0';
@@ -75,7 +75,7 @@ int int_octal(va_list type, char buffer[],
 
 	i++;
 
-	return (write_num(0, i, buffer, flag, wid, precision, size));
+	return (un_num(0, i, buffer, flag, wid, precision, size));
 }
 
 /**
@@ -93,7 +93,7 @@ int int_octal(va_list type, char buffer[],
 int hex_decimal(va_list type, char buffer[],
 	int flag, int wid, int precision, int size)
 {
-	return (print_hex(type, "0123456789abcdef", buffer,
+	return (hex_decimal(type, "0123456789abcdef", buffer,
 		flag, 'x', wid, precision, size));
 }
 
@@ -111,7 +111,7 @@ int hex_decimal(va_list type, char buffer[],
 int hexa_upper1(va_list type, char buffer[],
 	int flag, int wid, int precision, int size)
 {
-	return (print_hex(types, "0123456789ABCDEF", buffer,
+	return (hex_decimal(type, "0123456789ABCDEF", buffer,
 		flag, 'X', wid, precision, size));
 }
 
@@ -137,7 +137,7 @@ int hex_low(va_list type, char map_to[], char buffer[],
 
 	UNUSED(wid);
 
-	m = convert_size_num(m, size);
+	m = convert_size1(m, size);
 
 	if (m == 0)
 		buffer[i--] = '0';
@@ -158,5 +158,5 @@ int hex_low(va_list type, char map_to[], char buffer[],
 
 	i++;
 
-	return (write_num(0, i, buffer, flag, wid, precision, size));
+	return (un_num(0, i, buffer, flag, wid, precision, size));
 }
