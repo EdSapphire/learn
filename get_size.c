@@ -7,20 +7,20 @@
  *
  * Return: Size.
  */
-int cal_size(const char *format, int *n)
+int cal_size(const char *format, int *i)
 {
-	int curr_n = *n + 1;
+	int curr_i = *i + 1;
 	int size = 0;
 
-	if (format[curr_n] == 'l')
+	if (format[curr_i] == 'l')
 		size = S_LONG;
-	else if (format[curr_n] == 'h')
+	else if (format[curr_i] == 'h')
 		size = S_SHORT;
 
 	if (size == 0)
-		*n = curr_n - 1;
+		*i = curr_i - 1;
 	else
-		*n = curr_n;
+		*i = curr_i;
 
 	return (size);
 }

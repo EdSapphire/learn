@@ -93,7 +93,7 @@ int int_octal(va_list type, char buffer[],
 int hex_decimal(va_list type, char buffer[],
 	int flag, int wid, int precision, int size)
 {
-	return (hex_decimal(type, "0123456789abcdef", buffer,
+	return (hex_low(type, "0123456789abcdef", buffer,
 		flag, 'x', wid, precision, size));
 }
 
@@ -111,7 +111,7 @@ int hex_decimal(va_list type, char buffer[],
 int hexa_upper1(va_list type, char buffer[],
 	int flag, int wid, int precision, int size)
 {
-	return (hex_decimal(type, "0123456789ABCDEF", buffer,
+	return (hex_low(type, "0123456789ABCDEF", buffer,
 		flag, 'X', wid, precision, size));
 }
 

@@ -11,7 +11,7 @@ void print_buffer(char buffer[], int *buff_d);
 
 int _printf(const char *format, ...)
 {
-	int i, printed = 0, printed_chars = 0;
+	int i, print = 0, printed_chars = 0;
 	int flag, wid, precision, size, buff_d = 0;
 	va_list view;
 	char buffer[BUFF_SIZE];
@@ -37,7 +37,7 @@ int _printf(const char *format, ...)
 			flag = calc_flag(format, &i);
 			wid = print_width(format, &i, view);
 			precision = calc_precision(format, &i, view);
-			size = cal_size(format, &n);
+			size = cal_size(format, &i);
 			++i;
 			print = con_print(format, &i, view, buffer,
 				flag, wid, precision, size);

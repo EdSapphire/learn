@@ -19,9 +19,9 @@ int con_print(const char *format, int *d, va_list view, char buffer[],
 	int i, unknow_len = 0, printed_chars = -1;
 	format_t format_types[] = {
 		{'c', write_char}, {'s', _string1}, {'%', cal_percent},
-		{'i', new_int}, {'b', _binary}, {'u', int_num}, 
-		{'o', int_octal}, {'d', hex_decimal}, 
-		{'X', hex_upper1}, {'x', hex_low}, {'p', var_ptr}, {'S', non_chars},
+		{'i', new_int}, {'d', new_int}, {'b', _binary}, {'u', int_num}, 
+		{'o', int_octal}, {'x', hex_decimal}, 
+		{'X', hex_upper1}, {'p', var_ptr}, {'S', non_chars},
 		{'r', _reverse}, {'R', rot13_str}, {'\0', NULL}
 	};
 	for (i = 0; format_types[i].format != '\0'; i++)
