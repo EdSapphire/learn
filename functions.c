@@ -17,7 +17,7 @@ int write_char(va_list type, char buffer[],
 {
 	char c = va_arg(type, int);
 
-	return (handle_write_char(c, buffer, flag, wid, precision, size));
+	return (_handler(c, buffer, flag, wid, precision, size));
 }
 
 /**
@@ -140,7 +140,7 @@ int new_int(va_list type, char buffer[],
 
 	i++;
 
-	return (write_number(is_negative, i, buffer, flags, wid, precision, size));
+	return (_numbers(is_negative, i, buffer, flags, wid, precision, size));
 }
 
 /**
