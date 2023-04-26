@@ -18,11 +18,11 @@ int con_print(const char *format, int *d, va_list view, char buffer[],
 {
 	int i, unknow_len = 0, printed_chars = -1;
 	format_t format_types[] = {
-		{'c', print_char}, {'s', print_string}, {'%', print_percent},
-		{'i', print_int}, {'d', print_int}, {'b', print_binary},
-		{'u', print_unsigned}, {'o', print_octal}, {'x', print_hexadecimal},
-		{'X', print_hexa_upper}, {'p', print_pointer}, {'S', print_non_printable},
-		{'r', print_reverse}, {'R', print_rot13string}, {'\0', NULL}
+		{'c', write_char}, {'s', _string1}, {'%', cal_percent},
+		{'i', new_int}, {'b', _binary}, {'u', int_num}, 
+		{'o', int_octal}, {'d', hex_decimal}, 
+		{'X', hex_upper1}, {'x', hex_low}, {'p', var_ptr}, {'S', non_chars},
+		{'r', _reverse}, {'R', rot13_str}, {'\0', NULL}
 	};
 	for (i = 0; format_types[i].format != '\0'; i++)
 		if (format[*d] == format_types[i].format)

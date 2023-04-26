@@ -30,4 +30,3 @@ int calc_flag(const char *format, int *i)
 
 	return (flag);
 }
-
