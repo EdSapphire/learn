@@ -12,8 +12,8 @@
  * Return: Number of chars.
  */
 
-int int_num(va_list type, char buffer[],
-	int flag, int wid, int precision, int size)
+int int_num(va_list type, char buffer[], int flag,
+		int wid, int precision, int size)
 {
 	int i = BUFF_SIZE - 2;
 	unsigned long int m = va_arg(type, unsigned long int);
@@ -47,8 +47,8 @@ int int_num(va_list type, char buffer[],
  *
  * Return: Number of chars.
  */
-int int_octal(va_list type, char buffer[],
-	int flag, int wid, int precision, int size)
+int int_octal(va_list type, char buffer[], int flag,
+		int wid, int precision, int size)
 {
 
 	int i = BUFF_SIZE - 2;
@@ -90,8 +90,8 @@ int int_octal(va_list type, char buffer[],
  * Return: Number of chars.
  */
 
-int hex_decimal(va_list type, char buffer[],
-	int flag, int wid, int precision, int size)
+int hex_decimal(va_list type, char buffer[], int flag,
+		int wid, int precision, int size)
 {
 	return (hex_low(type, "0123456789abcdef", buffer,
 		flag, 'x', wid, precision, size));
@@ -108,8 +108,8 @@ int hex_decimal(va_list type, char buffer[],
  *
  * Return: Number of chars printed
  */
-int hexa_upper1(va_list type, char buffer[],
-	int flag, int wid, int precision, int size)
+int hexa_upper1(va_list type, char buffer[], int flag,
+		int wid, int precision, int size)
 {
 	return (hex_low(type, "0123456789ABCDEF", buffer,
 		flag, 'X', wid, precision, size));

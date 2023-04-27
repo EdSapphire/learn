@@ -12,8 +12,7 @@
  *
  * Return: Number of chars to be printed
  */
-int write_char(va_list type, char buffer[],
-	int flag, int wid, int precision, int size)
+int write_char(va_list type, char buffer[], int flag, int wid, int precision, int size)
 {
 	char c = va_arg(type, int);
 
@@ -31,8 +30,7 @@ int write_char(va_list type, char buffer[],
  *
  * Return: Number of chars.
  */
-int _string1(va_list type, char buffer[],
-	int flag, int wid, int precision, int size)
+int _string1(va_list type, char buffer[], int flag, int wid, int precision, int size)
 {
 	int length = 0, i;
 	char *str = va_arg(type, char *);
@@ -46,7 +44,7 @@ int _string1(va_list type, char buffer[],
 	{
 		str = "(null)";
 		if (precision >= 6)
-			str = "      ";
+			str = " ";
 	}
 
 	while (str[length] != '\0')
@@ -87,8 +85,7 @@ int _string1(va_list type, char buffer[],
  *
  * Return: No. of chars
  */
-int cal_percent(va_list type, char buffer[],
-	int flag, int wid, int precision, int size)
+int cal_percent(va_list type, char buffer[], int flag, int wid, int precision, int size)
 {
 	UNUSED(type);
 	UNUSED(buffer);
@@ -110,8 +107,7 @@ int cal_percent(va_list type, char buffer[],
  *
  * Return: Number of chars printed
  */
-int new_int(va_list type, char buffer[],
-	int flag, int wid, int precision, int size)
+int new_int(va_list type, char buffer[], int flag, int wid, int precision, int size)
 {
 	int i = BUFF_SIZE - 2;
 	int is_negative = 0;
@@ -154,8 +150,7 @@ int new_int(va_list type, char buffer[],
  *
  * Return: Numbers of char printed.
  */
-int _binary(va_list type, char buffer[],
-	int flag, int wid, int precision, int size)
+int _binary(va_list type, char buffer[], int flag, int wid, int precision, int size)
 {
 	unsigned int n, m, i, sum;
 	unsigned int a[32];

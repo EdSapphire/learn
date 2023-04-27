@@ -2,7 +2,7 @@
 
 /**
  * is_print1 - A function that check if a char is printable
- * @c: Char 
+ * @c: The char to be checked 
  *
  * Return: 1 if c is printable, 0 otherwise
  */

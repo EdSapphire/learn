@@ -1,6 +1,20 @@
 #include "main.h"
 
 void print_buffer(char buffer[], int *buff_d);
+int _printf(const char *format, ...);
+
+/**
+ * print_buffer - Prints the contents of the buffer if it exist
+ * @buffer: Array of chars
+ * @buff_d: Index at which to add next char, represents the length.
+ */
+void print_buffer(char buffer[], int *buff_d)
+{
+        if (*buff_d > 0)
+                write(1, &buffer[0], *buff_d);
+
+        *buff_d = 0;
+}
 
 /**
  * _printf - This is a Printf function
@@ -39,10 +53,11 @@ int _printf(const char *format, ...)
 			precision = calc_precision(format, &i, view);
 			size = cal_size(format, &i);
 			++i;
-			print = con_print(format, &i, view, buffer,
-				flag, wid, precision, size);
+			print = con_print(format, &i, view, buffer, flag, wid, precision, size);
+
 			if (print == -1)
 				return (-1);
+
 			printed_chars += print;
 		}
 	}
@@ -52,17 +67,4 @@ int _printf(const char *format, ...)
 	va_end(view);
 
 	return (printed_chars);
-}
-
-/**
- * print_buffer - Prints the contents of the buffer if it exist
- * @buffer: Array of chars
- * @buff_ind: Index at which to add next char, represents the length.
- */
-void print_buffer(char buffer[], int *buff_d)
-{
-        if (*buff_d > 0)
-                write(1, &buffer[0], *buff_d);
-
-        *buff_d = 0;
 }

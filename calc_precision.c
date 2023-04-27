@@ -3,7 +3,7 @@
 /**
  * calc_precision - A function that calculates the precision
  * @format: Formatted string in which to print the arguments 
- * @i: p to be printed
+ * @i: Argument to be printed
  * @view: Argument list
  *
  * Return: Precision.

@@ -3,8 +3,8 @@
 /**
  * print_width - A funtion that prints the width
  * @format: Formatted string that prints arguments
- * @i: Argument list
- * @view: Arguments view
+ * @i: Arguments to be printed
+ * @view: Arguments list
  *
  * Return: The width.
  */
