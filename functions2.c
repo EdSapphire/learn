@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * var_ptr - A function that prints the value of a pointer variable
+ * var_ptr - Prints the value of a pointer variable
  * @type: List of arguments
- * @buffer: Buffer array
+ * @buffer: Buffer array to handle print
  * @flag: Calculate flags
  * @wid: Width specifier
  * @precision: Precision specifier
