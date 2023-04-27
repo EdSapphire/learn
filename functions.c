@@ -10,7 +10,7 @@
  * @precision: Precision specifier
  * @size: Size specifier
  *
- * Return: Number of chars
+ * Return: Number of chars to be printed
  */
 int write_char(va_list type, char buffer[],
 	int flag, int wid, int precision, int size)
