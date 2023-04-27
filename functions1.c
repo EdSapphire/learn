@@ -98,7 +98,7 @@ int hex_decimal(va_list type, char buffer[],
 }
 
 /**
- * hex_upper1 - Prints an unsigned number in upper hexadecimal notation
+ * hexa_upper1 - Prints an unsigned number in upper hexadecimal notation
  * @type: List of arguments
  * @buffer: Buffer array to handle print
  * @flag: Calculates active flags

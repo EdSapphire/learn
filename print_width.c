@@ -8,7 +8,7 @@
  *
  * Return: The width.
  */
-int get_width(const char *format, int *i, va_list view)
+int print_width(const char *format, int *i, va_list view)
 {
 	int curr_i;
 	int wid = 0;

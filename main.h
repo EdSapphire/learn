@@ -66,7 +66,7 @@ int int_octal(va_list type, char buffer[],
 	int flag, int wid, int precision, int size);
 int hex_decimal(va_list type, char buffer[],
 	int flag, int wid, int precision, int size);
-int hex_upper1(va_list type, char buffer[],
+int hexa_upper1(va_list type, char buffer[],
 	int flag, int wid, int precision, int size);
 int hex_low(va_list type, char map_to[],
 char buffer[], int flag, char flag_ch, int wid, int precision, int size);
