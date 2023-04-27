@@ -2,7 +2,7 @@
 
 /**
  * print_width - A funtion that prints the width
- * @format: Formatted string
+ * @format: Formatted string that prints arguments
  * @i: Argument list
  * @view: Arguments view
  *
