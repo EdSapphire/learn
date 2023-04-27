@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * int_num - Prints an unsigned number
+ * int_num - unsigned number to be printed
  * @type: List arguments
  * @buffer: Buffer array
  * @flag: Calculates flags
@@ -38,7 +38,7 @@ int int_num(va_list type, char buffer[],
 
 /**
  * int_octal - Prints an unsigned number in octal notation
- * @type: List of arguments
+ * @type: List 
  * @buffer: Buffer array to handle print
  * @flag: Calculate flags
  * @wid: The Width
