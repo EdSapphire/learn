@@ -1,7 +1,7 @@
 #include "main.h"
 
 /** 
- * _handler - A function that prints a string
+ * _handler - Prints a string
  * @c: String to print
  * @buffer: Buffer that handle print
  * @flag: Calculate flag
