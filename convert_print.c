@@ -2,8 +2,8 @@
 
 /**
  * con_print - A function that prints an argument based on its type
- * @format: Formatted string
- * @view: List of arguments
+ * @format: Formatted string in which to print the arguments
+ * @view: List of arguments to be printed
  * @d: Argument
  * @buffer: Buffer array to handle print.
  * @flag: Calculates flags
