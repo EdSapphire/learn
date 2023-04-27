@@ -34,7 +34,7 @@ struct format
 /**
  * typedef struct format format_t - Struct op
  *
- * @format: The format.
+ * @format: The format argument.
  * @format_t: The function associated.
  */
 typedef struct format format_t;
