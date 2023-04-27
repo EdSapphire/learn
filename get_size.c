@@ -2,7 +2,7 @@
 
 /**
  * cal_size - This Calculates the size to cast the argument
- * @format: Formatted string that print the arguments
+ * @format: Formatted string
  * @n: List of arguments to be printed.
  *
  * Return: Size.
